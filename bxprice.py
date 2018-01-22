@@ -4,11 +4,11 @@ from datetime import datetime
 # from forex_python.converter import CurrencyRates
 # Bitfinex api https://api.bitfinex.com/v1/pubticker/btcusd
 
-//thaibai rate 
+# thaibath function 
 def thbrate():
     thb = requests.get("https://v3.exchangerate-api.com/bulk/76662b71dfb2c14a89b1afda/USD")
     return thb.json()['rates']['THB']
-//-----coins-----
+# -----coins-----
 def bx_BTC():
     bx_BTC_tick = requests.get("https://bx.in.th/api/orderbook/?pairing=1")
     return bx_BTC_tick.json()['bids'][0][0]
@@ -38,11 +38,10 @@ while True:
     bxrp_l = float(bx_XRP())
     bomg_l = float(bx_OMG())
     bevx_l = float(bx_EVX())
-
     btbtc_l = float(bt_BTC())
     btxrp_l = float(bt_XRP())
     btomg_l = float(bt_OMG())
-
+# Add others
     print(datetime.now().strftime('%Y-%m-%d %H:%M:%S'),">> 1USD = {:.2f}THB <<".format(thb_l))
     print("-------BX--------|------Bittrex(THB)-----")
     print("BTC =  {0:.2f}".format(bbtc_l),"|\t{0:.2f}".format(btbtc_l*thb_l))
