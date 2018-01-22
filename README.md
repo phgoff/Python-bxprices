@@ -1,2 +1,10 @@
 # Python-bxprices
-some project of cryptocurrency
+## Install with [pyinstaller](http://www.pyinstaller.org/)
+```
+$ pip install pyinstaller
+```
+### AND 
+```
+$ pyinstaller bxprice.py
+```
+
