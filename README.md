@@ -7,4 +7,7 @@ $ pip install pyinstaller
 ```
 $ pyinstaller bxprice.py
 ```
-
+## OR JUST
+```
+$ py bxprice.py
+```
